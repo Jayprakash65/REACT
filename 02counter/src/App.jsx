@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   
-  let [counter, setCounter] = useState(10)
+  let [counter, setCounter] = useState(10)    // array ka 0 index mai wo variable hai or 1st index jo hai wo function hai 
 
 
   //let counter = 10
