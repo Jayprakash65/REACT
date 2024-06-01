@@ -21,6 +21,8 @@ function Test() {
           <button onClick = {() => setColor("#FFA000")} className='outline-none px-5 rounded-3xl'   style={{backgroundColor: '#FFA000'}} >Red</button>
           <button onClick = {() => setColor("#00ffff")} className='outline-none px-5 rounded-3xl'   style={{backgroundColor: '#00ffff'}} >Red</button>
           <button onClick = {() => setColor("	#ff0080")} className='outline-none px-5 rounded-3xl'   style={{backgroundColor: '#ff0080'}} >Red</button>
+          <button onClick = {() => setColor(" black")} className='outline-none px-5 rounded-3xl text-white'   style={{backgroundColor: 'black'}} >Red</button>
+
           
         </div>
         
@@ -31,4 +33,5 @@ function Test() {
 }
 
 export default Test
+
 
