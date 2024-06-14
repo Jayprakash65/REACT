@@ -32,7 +32,7 @@ const Todos = () => {
                 type="text"
                 value={newText}
                 onChange={(e) => setNewText(e.target.value)}
-                className="text-white bg-zinc-800 w-72 "
+                className="text-white bg-zinc-800 w-72 outline-none"
               />
             ) : (
               <div className="text-white ">{todo.text}</div>
