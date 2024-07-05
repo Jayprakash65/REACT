@@ -26,3 +26,5 @@ function card({username = 'defalut', btntext = 'vist us'}) {
 }
 
 export default card
+
+
