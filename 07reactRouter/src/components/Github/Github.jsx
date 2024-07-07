@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const Github = () => {
+    const data = useLoaderData()
+    
+    //const [data, setData] = useState([])
 
-    const [data, setData] = useState([])
-
-    useEffect( () => {
-        fetch('https:/api.github.com/users/jayprakash65')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            setData(data)
-        })
-    },[])
+    // useEffect( () => {
+    //     fetch('https:/api.github.com/users/jayprakash65')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         setData(data)
+    //     })
+    // },[])
 
 
   return (
@@ -25,3 +27,13 @@ const Github = () => {
 }
 
 export default Github
+
+
+
+
+
+// loader concept 
+export const githubInfoLoader = async () => {
+  const response = await fetch('https:/api.github.com/users/jayprakash65')
+  return response.json()
+}

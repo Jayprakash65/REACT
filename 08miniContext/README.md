@@ -1,8 +1,12 @@
-# React + Vite
+# Context Api
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. STEP 1 -> TO CRETAE A CONTEXT FOLDARE UNDER SRC THEN CREATE A FILE NAME "UserContext.js".
 
-Currently, two official plugins are available:
+```javascript
+import React from "react";
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+const UserContext = React.createContext()
+
+export default UserContext;
+```
+
