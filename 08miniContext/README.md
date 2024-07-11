@@ -9,4 +9,4 @@ const UserContext = React.createContext()
 
 export default UserContext;
 ```
-
+2. STEP 2 -> 

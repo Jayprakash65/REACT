@@ -20,7 +20,7 @@ function App() {
 
   useEffect( () => {
     const html = document.querySelector('html')
-    html.classList.remove('light', 'dark')
+    html.classList.remove('light', 'dark')      // pahle hamne clean kiya light or dark dono remove kiya 
     html.classList.add(themeMode)
   }, [themeMode])
 

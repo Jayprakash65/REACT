@@ -2,11 +2,11 @@ import React, { useState} from 'react'
 import { useTodo } from '../contexts';
 
 
-function TodoItem({ todo }) {
+function TodoItem({ todo }) {     //ey jo todo destructure kiya hai wo ek onject hai 
     const {updateTodo, deleteTodo, toggleComplete} = useTodo()
 
     const [isTodoEditable, setIsTodoEditable] = useState(false)
-    const [todoMsg, setTodoMsg] = useState(todo.todo)
+    const [todoMsg, setTodoMsg] = useState(todo.todom)
 
     const editTodo = () => {
       updateTodo(todo.id, {...todo, todo: todoMsg})
@@ -32,7 +32,7 @@ function TodoItem({ todo }) {
           <input
               type="text"
               className={`border outline-none w-full bg-transparent rounded-lg ${
-                  isTodoEditable ? "border-black/10 px-2" : "border-transparent"
+                  isTodoEditable ? "border-none px-2" : "border-transparent"
               } ${todo.completed ? "line-through" : ""}`}
               value={todoMsg}
               onChange={(e) => setTodoMsg(e.target.value)}
@@ -44,7 +44,7 @@ function TodoItem({ todo }) {
               onClick={() => {
                   if (todo.completed) return;
 
-                  if (isTodoEditable) {
+                  if (isTodoEditable === true) {
                       editTodo();
                   } else setIsTodoEditable((prev) => !prev);
               }}

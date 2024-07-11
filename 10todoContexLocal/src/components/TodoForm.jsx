@@ -8,9 +8,9 @@ function TodoForm() {
     const add = (e) => {
         e.preventDefault()
 
-        if(!todo) return 
+        if(!todo) return           // agr koi todo hai ni tho bas return kar do or next line agr todo hai tho 
 
-        addTodo({ id: Date.now(), todo: todo, completed: false})
+        addTodo({ id: Date.now(), todom: todo, completed: false})
         setTodo("")
     }
 
